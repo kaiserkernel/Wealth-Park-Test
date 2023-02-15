@@ -17,7 +17,7 @@ const Home: NextPage<Props> = (props) => {
   const { data, hasNextPage, fetchNextPage, isError, isFetchingNextPage } = useGetNewsPostsByLimit({
     initialData,
     limit: 10,
-    topStories: topStories.slice(0, 20),
+    topStories: topStories.slice(0, 100),
   })
 
   const loadMoreRef = useRef<HTMLHeadingElement>(null)
