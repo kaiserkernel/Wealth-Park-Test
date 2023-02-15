@@ -1,5 +1,5 @@
+// Import useInfiniteQuery to show large data gradually more.
 import { useInfiniteQuery } from 'react-query'
-
 import { getNewsPostsByLimit } from '@src/api'
 
 export const useGetNewsPostsByLimit = ({ initialData, limit: pageLimit, topStories }: any) => {

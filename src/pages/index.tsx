@@ -3,16 +3,21 @@ import { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
 
 import { PostList, Loading } from '@src/components'
-// import { getNewsPostsByLimit } from '@src/api'
 import { useGetNewsPostsByLimit, useIntersectionObserver } from '@src/hooks'
 import { getNewsPostById, getTopStories } from '@src/api/getNewsPosts'
+import { IPost } from '@src/types'
 
-const Home: NextPage = (props: any) => {
+interface Props {
+  initialData: IPost[],
+  topStories: number[]
+}
+
+const Home: NextPage<Props> = (props) => {
   const { initialData, topStories } = props
   const { data, hasNextPage, fetchNextPage, isError, isFetchingNextPage } = useGetNewsPostsByLimit({
     initialData,
     limit: 10,
-    topStories,
+    topStories: topStories.slice(0, 20),
   })
 
   const loadMoreRef = useRef<HTMLHeadingElement>(null)
