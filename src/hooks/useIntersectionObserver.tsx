@@ -11,8 +11,8 @@ interface Props {
 }
 
 const useIntersectionObserver = ({
-  root, // Ancestor of the target
-  target,
+  root, // Ancestor of the target, 
+  target, // Load more components will be the target
   onIntersect,
   threshold = 1.0, // A threshold of 1.0 means that when 100% of the target is visible within the element specified by the root option
   rootMargin = '0px',
