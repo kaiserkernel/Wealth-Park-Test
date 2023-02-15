@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post List Card renders correctly 1`] = `
+<div>
+  <div
+    class="flex-center space-x-4"
+    data-testid="loading"
+  >
+    <div
+      class="loading"
+    />
+    <span>
+       
+      Loading
+       
+    </span>
+  </div>
+</div>
+`;

@@ -1,0 +1,95 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next",
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:jsx-a11y/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "plugins": ["@typescript-eslint", "jest", "react"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off",
+    "import/no-cycle": "off",
+    "no-multi-assign": "off",
+    "import/imports-first": ["error", "absolute-first"],
+    "no-return-await": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": [
+      1,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "semi": ["error", "never"],
+    "constructor-super": "error",
+    "no-invalid-this": "error",
+    "no-restricted-syntax": ["error", "ForInStatement"],
+    "use-isnan": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "after-used",
+        "ignoreRestSiblings": true,
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/return-await": "off",
+    "@typescript-eslint/await-thenable": "error",
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-misused-new": "error",
+    "@typescript-eslint/no-use-before-define": "error",
+    "@typescript-eslint/restrict-plus-operands": "error",
+    "@typescript-eslint/no-unnecessary-condition": [
+      "error",
+      {
+        "allowConstantLoopConditions": true
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".js", ".jsx", ".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {}
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    // Allows for the parsing of modern ECMAScript features
+    "ecmaVersion": 2018,
+    // Allows for the use of imports
+    "sourceType": "module",
+    // https://blog.geographer.fr/eslint-parser-services, https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project
+    "project": "./tsconfig.json"
+  }
+}
