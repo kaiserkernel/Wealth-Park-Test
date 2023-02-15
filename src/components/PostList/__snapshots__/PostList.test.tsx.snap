@@ -3,8 +3,44 @@
 exports[`Post List renders correctly 1`] = `
 <div>
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8"
+    class="flex flex-col justify-center"
     data-testid="post-list"
-  />
+  >
+    <a
+      class="flex flex-col rounded overflow-hidden border mb-4"
+      data-testid="post-list-card"
+      href="https://jeremykun.com/2023/02/13/googles-fully-homomorphic-encryption-compiler-a-primer/"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <div
+        class="flex flex-row items-center p-2"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"
+          />
+        </svg>
+        <p
+          class="ml-2"
+        >
+          02/14/2023
+        </p>
+        <p
+          class="font-bold text-center p-2"
+        >
+          Google’s Fully Homomorphic Encryption Compiler – A Primer
+        </p>
+      </div>
+    </a>
+  </div>
 </div>
 `;

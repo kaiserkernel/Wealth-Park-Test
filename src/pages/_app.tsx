@@ -3,6 +3,7 @@ import { AppProps } from 'next/app'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
+// Import Tailwind.css
 import '@src/styles/tailwind.css'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
